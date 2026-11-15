@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3b1f14">
+<title>Frutis: фрукты в шоколаде, Валерик</title>
+<meta name="description" content="Фрукты в шоколаде, вафли, пончики, торты и мохито. Заказ в WhatsApp, доставка по Валерику и соседним сёлам.">
+<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/jost-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=4cb8fde2">
+</head>
+<body>
+<header class="shapka">
+  <div class="shapka__in">
+    <img class="shapka__znak" src="img/znak.svg" alt="" width="56" height="56">
+    <div>
+      <h1 class="shapka__imya">FRUTIS</h1>
+      <p class="shapka__podpis">Фрукты в шоколаде и десерты</p>
+    </div>
+  </div>
+  <p class="shapka__tekst">Много шоколада, много фруктов, много сладких моментов.</p>
+  <ul class="fakty">
+    <li><b>Доставка</b> Валерик, Гехи, Катар-Юрт, Гехи-Чу, Шалажи</li>
+    <li><b>Бесплатно</b> от 1000 ₽</li>
+  </ul>
+</header>
+
+<nav class="razdely" id="razdely" aria-label="Разделы меню"></nav>
+
+<main id="menu" class="menu"></main>
+
+<footer class="podval">
+  <p>Frutis, с. Валерик</p>
+  <p><a href="https://wa.me/79633376252" class="podval__wa">Написать в WhatsApp</a></p>
+  <p><a href="https://www.instagram.com/frutisvalerik/">Instagram @frutisvalerik</a></p>
+</footer>
+
+<button class="korzina-knopka" id="korzinaKnopka" type="button" hidden>
+  <span class="korzina-knopka__chislo" id="korzinaChislo">0</span>
+  <span>Корзина</span>
+  <span class="korzina-knopka__summa" id="korzinaSumma">0 ₽</span>
+</button>
+
+<div class="okno" id="vybor" hidden>
+  <div class="okno__fon" data-zakryt></div>
+  <section class="list" role="dialog" aria-modal="true" aria-labelledby="vyborImya">
+    <button class="list__zakryt" type="button" data-zakryt aria-label="Закрыть">×</button>
+    <h2 id="vyborImya" class="list__zag"></h2>
+    <p id="vyborOpis" class="list__opis"></p>
+    <div id="vyborVarianty"></div>
+    <button class="glavnaya" id="vyborDobavit" type="button">Добавить</button>
+  </section>
+</div>
+
+<div class="okno" id="korzina" hidden>
+  <div class="okno__fon" data-zakryt></div>
+  <section class="list" role="dialog" aria-modal="true" aria-labelledby="korzinaZag">
+    <button class="list__zakryt" type="button" data-zakryt aria-label="Закрыть">×</button>
+    <h2 id="korzinaZag" class="list__zag">Ваш заказ</h2>
+    <ul class="spisok" id="korzinaSpisok"></ul>
+    <form id="forma" class="forma" novalidate>
+      <fieldset class="pereklyuchatel">
+        <legend>Как получить</legend>
+        <label><input type="radio" name="sposob" value="Доставка" checked> <span>Доставка</span></label>
+        <label><input type="radio" name="sposob" value="Самовывоз"> <span>Самовывоз</span></label>
+      </fieldset>
+      <div id="dostavkaPolya">
+        <label class="pole">Село
+          <select name="selo" id="selo"></select>
+        </label>
+        <label class="pole">Улица и дом
+          <input name="adres" autocomplete="street-address" placeholder="Например, ул. Шерипова, 12">
+        </label>
+      </div>
+      <label class="pole">Ваше имя
+        <input name="imya" autocomplete="name">
+      </label>
+      <label class="pole">Пожелание
+        <textarea name="pozhelanie" rows="2" placeholder="Время, надпись, без орехов..."></textarea>
+      </label>
+      <p class="itog"><span>Итого</span> <b id="itogSumma">0 ₽</b></p>
+      <p class="dostavka-zametka" id="dostavkaZametka"></p>
+      <p class="oshibka" id="oshibka" role="alert"></p>
+      <button class="glavnaya glavnaya--wa" type="submit">Отправить заказ в WhatsApp</button>
+    </form>
+  </section>
+</div>
+
+<script src="js/menu.js?v=4cb8fde2"></script>
+<script src="js/app.js?v=4cb8fde2"></script>
+</body>
+</html>
