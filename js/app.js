@@ -248,4 +248,7 @@
 
   risuyMenu();
   obnovi();
+  // Разделы рисует скрипт: ссылку с #раздел докручиваем сами
+  var cel = location.hash && document.getElementById(location.hash.slice(1));
+  if (cel) cel.scrollIntoView();
 })();
